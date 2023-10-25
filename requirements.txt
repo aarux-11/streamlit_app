@@ -13,3 +13,10 @@ requests==2.22.0
 plotly_express==0.4.0
 streamlit-analytics==0.2.2
 streamlit-metrics==0.1.0
+imbalanced_learn == 0.8.1
+matplotlib == 3.3.4
+numpy == 1.22.4
+pandas == 1.2.4
+scipy == 1.7.3
+seaborn == 0.11.1
+sklearn == 1.1.3
