@@ -1,5 +1,3 @@
-pip install streamlit
-pip install streamlit-option-menu
 import streamlit as st
 
 # SETTING PAGE CONFIGURATIONS
