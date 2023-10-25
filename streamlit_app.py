@@ -1,10 +1,17 @@
+import pandas as pd
+import plotly.express as px
 import streamlit as st
 from streamlit_option_menu import option_menu
+import mysql.connector as sql
+import pymongo
+from googleapiclient.discovery import build
+from PIL import Image
+
 
 # SETTING PAGE CONFIGURATIONS
-icon = Image.open("Youtube_logo.png")
+#icon = Image.open("https://github.com/aarux-11/streamlit_app/blob/main/Youtube_logo.png")
 st.set_page_config(page_title= "Youtube Data Project - Aarushi",
-                   page_icon= icon,
+                   page_icon= "house-door-fill",
                    layout= "wide",
                    initial_sidebar_state= "expanded",
                    menu_items={'About': """This project is for submission purposes to GUVI only"""})
