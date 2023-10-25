@@ -1,7 +1,8 @@
 import streamlit as st
 
 # SETTING PAGE CONFIGURATIONS
-icon = st.Image(url("https://github.com/aarux-11/streamlit_app/blob/main/Youtube_logo.png"))
+icon = st.markdown("![Alt Text](https://github.com/aarux-11/streamlit_app/blob/main/Youtube_logo.png)")
+
 st.set_page_config(page_title= "Youtube Data Project - Aarushi",
                    page_icon= icon,
                    layout= "wide",
