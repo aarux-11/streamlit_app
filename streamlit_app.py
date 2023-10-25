@@ -29,23 +29,20 @@ with st.sidebar:
 
 
 # Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
-client = pymongo.MongoClient("your unique client id")
+client = pymongo.MongoClient("615b2440a86f236c59d5845d")
 db = client.youtube_data
 
-
-
 # CONNECTING WITH MYSQL DATABASE
-mydb = sql.connect(host="your host",
-                   user="your user name",
-                   password="your password",
+mydb = mysql.connector.connect(host="localhost",
+                   user="root",
+                   password="pass11",
                    database= "youtube_db"
                   )
 mycursor = mydb.cursor(buffered=True)
 
 
-
 # BUILDING CONNECTION WITH YOUTUBE API
-api_key = "Enter your Key"
+api_key = "AIzaSyAcMCuit-E9vj8ix0WbParTSr-8Rjc2kKw"
 youtube = build('youtube','v3',developerKey=api_key)
 
 
@@ -398,3 +395,4 @@ if selected == "View":
                      color=mycursor.column_names[0]
                     )
         st.plotly_chart(fig,use_container_width=True)
+        
