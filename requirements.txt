@@ -1,9 +1,9 @@
 altair<5
 streamlit==1.22.0
+streamlit-option-menu
 matplotlib == 3.3.4
 plotly==5.4.0
 plotly_express==0.4.0
-
 pickle5==0.0.11
 scikit-learn==1.2.2
 numpy==1.24.3
