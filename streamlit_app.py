@@ -29,7 +29,7 @@ with st.sidebar:
 
 
 # Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
-client = pymongo.MongoClient("615b2440a86f236c59d5845d")
+client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.youtube_data
 
 # CONNECTING WITH MYSQL DATABASE
