@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import plotly.express as px
 from streamlit_option_menu import option_menu
 import mysql.connector as sql
 import pymongo
