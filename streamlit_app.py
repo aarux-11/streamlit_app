@@ -2,11 +2,12 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # SETTING PAGE CONFIGURATIONS
+icon = Image.open("Youtube_logo.png")
 st.set_page_config(page_title= "Youtube Data Project - Aarushi",
-                   page_icon = "chart_with_upwards_trend",
+                   page_icon= icon,
                    layout= "wide",
                    initial_sidebar_state= "expanded",
-                  menu_items={'About': """This project is for submission purposes to GUVI only"""})
+                   menu_items={'About': """This project is for submission purposes to GUVI only"""})
 
 # CREATING OPTION MENU
 with st.sidebar:
@@ -19,5 +20,3 @@ with st.sidebar:
                                    "icon": {"font-size": "20px"},
                                    "container" : {"max-width": "5000px"},
                                    "nav-link-selected": {"background-color": "#A72283"}})
-
-
