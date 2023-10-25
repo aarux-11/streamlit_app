@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 # SETTING PAGE CONFIGURATIONS
 st.set_page_config(page_title= "Youtube Data Project - Aarushi",
