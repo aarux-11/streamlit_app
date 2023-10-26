@@ -9,7 +9,6 @@ plotly_express==0.4.0
 pymysql
 mysql.connector==2.2.9
 SQLAlchemy==2.0.22
-mysqlclient
 
 pickle5==0.0.11
 scikit-learn==1.2.2
