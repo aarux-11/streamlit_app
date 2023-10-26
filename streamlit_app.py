@@ -8,6 +8,8 @@ import pymongo
 from googleapiclient.discovery import build
 from PIL import Image
 
+browser.gatherUsageStats = False
+
 # SETTING PAGE CONFIGURATIONS
 #icon = Image.open("https://github.com/aarux-11/streamlit_app/blob/main/Youtube_logo.png")
 st.set_page_config(page_title= "Youtube Data Project - Aarushi",
