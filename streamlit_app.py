@@ -2,8 +2,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 from streamlit_option_menu import option_menu
-import mysql
-import mysql.connector as sql
+import pymysql
+import pymysql.connector as sql
 import pymongo
 from googleapiclient.discovery import build
 from PIL import Image
@@ -33,8 +33,8 @@ with st.sidebar:
 client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.youtube_data
 
-# CONNECTING WITH MYSQL DATABASE
-mydb = mysql.connector.connect(host="localhost",
+# CONNECTING WITH pymysql DATABASE
+mydb = pymysql.connector.connect(host="localhost",
                    user="root",
                    password="pass11",
                    database= "youtube_db"
@@ -162,7 +162,7 @@ if selected == "Home":
     st.image("title.png")
     col1,col2 = st.columns(2,gap= 'medium')
     col1.markdown("## :blue[Domain] : Social Media")
-    col1.markdown("## :blue[Technologies used] : Python,MongoDB, Youtube Data API, MySql, Streamlit")
+    col1.markdown("## :blue[Technologies used] : Python,MongoDB, Youtube Data API, pymysql, Streamlit")
     col1.markdown("## :blue[Overview] : Retrieving the Youtube channels data from the Google API, storing it in a MongoDB as data lake, migrating and transforming data into a SQL database,then querying the data and displaying it in the Streamlit app.")
     col2.markdown("#   ")
     col2.markdown("#   ")
@@ -248,7 +248,7 @@ if selected == "Extract & Transform":
                 insert_into_channels()
                 insert_into_videos()
                 insert_into_comments()
-                st.success("Transformation to MySQL Successful !!")
+                st.success("Transformation to pymysql Successful !!")
             except:
                 st.error("Channel details already transformed !!")
             
