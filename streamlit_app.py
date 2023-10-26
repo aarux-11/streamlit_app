@@ -1,8 +1,8 @@
+import mysql.connector as sql
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 from streamlit_option_menu import option_menu
-import mysql.connector as sql
 import pymongo
 from googleapiclient.discovery import build
 from PIL import Image
