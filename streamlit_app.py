@@ -9,7 +9,7 @@ from googleapiclient.discovery import build
 from PIL import Image
 
 #browser.gatherUsageStats = False
-proxy_read_timeout 3600;
+proxy_read_timeout = 3600;
 
 # SETTING PAGE CONFIGURATIONS
 #icon = Image.open("https://github.com/aarux-11/streamlit_app/blob/main/Youtube_logo.png")
