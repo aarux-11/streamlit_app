@@ -6,7 +6,7 @@ matplotlib == 3.3.4
 plotly==5.4.0
 plotly_express==0.4.0
 
-pymysql
+mysqlclient
 mysql.connector==2.2.9
 SQLAlchemy==2.0.22
 
