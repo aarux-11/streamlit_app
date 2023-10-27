@@ -33,5 +33,8 @@ Important Notes:
 - Change default authentication in MYSQL commands:
     ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{NewPassword}';
-
+- Run this on command prompt: SET PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION= 'python'
+- This line is added to increase the requets timeout duration proxy_read_timeout = 3600;
+- As streamlit does not support authentication plugin 'caching_sha2_password', after numerous efforts I switched to phpmyadmin and pymysql instead of mysql.
+- 
 Contributions are welcome! 
