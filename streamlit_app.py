@@ -33,7 +33,7 @@ with st.sidebar:
                                    "nav-link-selected": {"background-color": "#A72283"}})
 
 
-Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
+#Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
 client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.youtube_data
 
