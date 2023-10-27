@@ -160,7 +160,7 @@ def channel_names():
 # HOME PAGE
 if selected == "Home":
     # Title Image
-    st.image("title.png")
+    st.image("Youtube_logo.png")
     col1,col2 = st.columns(2,gap= 'medium')
     col1.markdown("## :blue[Domain] : Social Media")
     col1.markdown("## :blue[Technologies used] : Python,MongoDB, Youtube Data API, mysql, Streamlit")
