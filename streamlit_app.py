@@ -38,7 +38,7 @@ client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nr
 db = client.youtube_data
 
 # CONNECTING WITH mysql DATABASE
-mydb = mysql.connector.connect(host="192.168.56.1", user="root", password="pass12", database= "youtube_db", auth_plugin='mysql_native_password')
+mydb = mysql.connector.connect(host="127.0.0.1", user="root", password="pass12", database= "youtube_db", auth_plugin='mysql_native_password')
 
 mycursor = mydb.cursor(buffered=True)
 
