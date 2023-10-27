@@ -168,7 +168,7 @@ if selected == "Home":
     col2.markdown("#   ")
     col2.markdown("#   ")
     col2.markdown("#   ")
-    col2.image("ytapi.png")
+    col2.image("Youtube_logo.png")
     
     
 # EXTRACT AND TRANSFORM PAGE
