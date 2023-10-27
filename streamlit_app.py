@@ -38,10 +38,10 @@ with st.sidebar:
 client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.youtube_data
 
-#connect with mysql db server 8.0
-# CONNECTING WITH mysql DATABASE
-mydb = mysql.connector.connect(host="192.168.56.1", user="root", password="pass11", database= "youtube_db", auth_plugin='mysql_native_password')
-mycursor = mydb.cursor(buffered=True)
+# #connect with mysql db server 8.0
+# # CONNECTING WITH mysql DATABASE
+# mydb = mysql.connector.connect(host="192.168.56.1", user="root", password="pass11", database= "youtube_db", auth_plugin='mysql_native_password')
+# mycursor = mydb.cursor(buffered=True)
 
 # CONNECTING WITH phpmyadmin DATABASE
 mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
