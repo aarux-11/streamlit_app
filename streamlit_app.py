@@ -44,8 +44,8 @@ db = client.youtube_data
 # mycursor = mydb.cursor(buffered=True)
 
 # CONNECTING WITH phpmyadmin DATABASE
-mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
-mycursor = mydb.cursor(buffered=True)
+# mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
+# mycursor = mydb.cursor(buffered=True)
 
 
 # BUILDING CONNECTION WITH YOUTUBE API
