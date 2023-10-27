@@ -30,5 +30,8 @@ Important Notes:
 - The versions mentioned in requirements.txt are latest.
 - This git profile is connected with Streamlit in order to launch the app - changes are visible real time.
 - Url: https://appapp-outmvqvzfxsbmmqcx2vz9d.streamlit.app/
+- Change default authentication in MYSQL commands:
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'password' PASSWORD EXPIRE NEVER;
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{NewPassword}';
 
 Contributions are welcome! 
