@@ -6,6 +6,7 @@ from streamlit_option_menu import option_menu
 import pymongo
 from googleapiclient.discovery import build
 from PIL import Image
+import pymysql
 
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION= 'python'
 
@@ -38,7 +39,7 @@ client = pymongo.MongoClient("mongodb+srv://Aarushi:<password>@youtubeproject.nr
 db = client.youtube_data
 
 # CONNECTING WITH mysql DATABASE
-mydb = mysql.connector.connect(host="localhost:6060", user="root", password="", database= "youtube_db", auth_plugin='mysql_native_password')
+mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
 
 mycursor = mydb.cursor(buffered=True)
 
