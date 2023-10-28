@@ -51,9 +51,6 @@ if __name__ == "__main__":
 
 # from pymongo_get_database import get_database
 dbname = get_database()
-collections1 = dbname["channel_details"]
-collections2 = dbname["video_details"]
-collections3 = dbname["comments_details"]
 
 #connect with mysql db server 8.0
 # CONNECTING WITH mysql DATABASE
@@ -174,7 +171,7 @@ def get_comments_details(v_id):
 # FUNCTION TO GET CHANNEL NAMES FROM MONGODB
 def channel_names():   
     ch_name = []
-    for i in db.channel_details.find():
+    for i in dbname.channel_details.find():
         ch_name.append(i['Channel_name'])
     return ch_name
 
@@ -221,6 +218,10 @@ if selected == "Extract & Transform":
                     return com_d
                 comm_details = comments()
 
+                collections1 = dbname["channel_details"]
+                collections2 = dbname["video_details"]
+                collections3 = dbname["comments_details"]
+
                 collections1.insert_many(ch_details)
                 collections2.insert_many(vid_details)
                 collections3.insert_many(comm_details)
@@ -235,7 +236,7 @@ if selected == "Extract & Transform":
         user_inp = st.selectbox("Select channel",options= ch_names)
         
         def insert_into_channels():
-                collections = db.channel_details
+                collections = dbname.channel_details
                 query = """INSERT INTO channels VALUES(%s,%s,%s,%s,%s,%s,%s,%s)"""
                 
                 for i in collections.find({"Channel_name" : user_inp},{'_id' : 0}):
@@ -243,7 +244,7 @@ if selected == "Extract & Transform":
                     mydb.commit()
                 
         def insert_into_videos():
-            collections1 = db.video_details
+            collections1 = dbname.video_details
             query1 = """INSERT INTO videos VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
 
             for i in collections1.find({"Channel_name" : user_inp},{'_id' : 0}):
@@ -251,8 +252,8 @@ if selected == "Extract & Transform":
                 mydb.commit()
 
         def insert_into_comments():
-            collections1 = db.video_details
-            collections2 = db.comments_details
+            collections1 = dbname.video_details
+            collections2 = dbname.comments_details
             query2 = """INSERT INTO comments VALUES(%s,%s,%s,%s,%s,%s,%s)"""
 
             for vid in collections1.find({"Channel_name" : user_inp},{'_id' : 0}):
