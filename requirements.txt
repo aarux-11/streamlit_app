@@ -9,7 +9,7 @@ SQLAlchemy==2.0.22
 pymongo
 pymongo[srv]
 certifi
-ssl
+
 
 matplotlib == 3.3.4
 plotly==5.4.0
