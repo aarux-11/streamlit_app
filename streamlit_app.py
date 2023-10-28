@@ -222,11 +222,7 @@ if selected == "Extract & Transform":
                 comm_details = comments()
 
                 collections1.insert_many(ch_details)
-
-                
                 collections2.insert_many(vid_details)
-
-                
                 collections3.insert_many(comm_details)
                 st.success("Upload to MogoDB successful !!")
       
