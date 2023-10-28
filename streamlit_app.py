@@ -64,7 +64,7 @@ dbname = get_database()
 # mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
 # mycursor = mydb.cursor(buffered=True)
 
-mydb = pymysql.connect(host="localhost", port=3306, user="root", passwd="", database="youtube_db")
+mydb = pymysql.connect(host="localhost", user="root", passwd="", database="youtube_db")
 cursor = mydb.cursor()
 
 
