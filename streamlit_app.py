@@ -42,7 +42,7 @@ from pymongo import MongoClient
 
 def get_database():
     CONNECTION_STRING = "mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority"
-    client = MongoClient(CONNECTION_STRING)
+    client = MongoClient(CONNECTION_STRING, ssl_cert_reqs=ssl.CERT_NONE)
     
     return client['YT_DataFetch']
 
