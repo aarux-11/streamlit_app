@@ -201,7 +201,7 @@ if selected == "Extract & Transform":
     with tab1:
         st.markdown("#    ")
         st.write("### Enter YouTube Channel_ID below :")
-        ch_id = st.text_input("Hint : Goto channel's home page > Right click > View page source > Find channel_id").split(',')
+        ch_id = st.text_input("Hint : Goto channel's home page > Right click > View page source > Find external channel_id").split(',')
 
         if ch_id and st.button("Extract Data"):
             ch_details = get_channel_details(ch_id)
