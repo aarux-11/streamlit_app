@@ -41,7 +41,7 @@ with st.sidebar:
 from pymongo import MongoClient
 
 def get_database():
-    CONNECTION_STRING = "mongodb://atlas-sql-653990f6a6c788739624beda-sokj0.a.query.mongodb.net/YT_DataFetch?ssl=true&authSource=admin".format(MONGO_USER, MONGO_PASS, MONGO_HOST, MONGO_PORT, MONGO_DB)
+    CONNECTION_STRING = "mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/"
     client = MongoClient(CONNECTION_STRING)
     
     return client['YT_DataFetch']
