@@ -35,12 +35,25 @@ with st.sidebar:
 
 
 #Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
-client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
-db = client.YT_DataFetch
+# client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
+# db = client.YT_DataFetch
 
-collections1 = db.channel_details
-collections2 = db.video_details
-collections3 = db.comments_details
+from pymongo import MongoClient
+
+def get_database():
+    CONNECTION_STRING = "mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority"
+    client = MongoClient(CONNECTION_STRING)
+    
+    return client['YT_DataFetch']
+
+if __name__ == "__main__":
+    dbname = get_database()
+
+from pymongo_get_database import get_database
+dbname = get_database()
+collections1 = dbname["channel_details"]
+collections2 = dbname["video_details"]
+collections3 = dbname["comments_details"]
 
 #connect with mysql db server 8.0
 # CONNECTING WITH mysql DATABASE
