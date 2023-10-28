@@ -45,7 +45,7 @@ ca = certifi.where()
 
 def get_database():
     CONNECTION_STRING = "mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/"
-    client = MongoClient(CONNECTION_STRING, tlsCAFile=ca, tlsAllowInvalidCertificates=True)
+    client = MongoClient(CONNECTION_STRING, tlsCAFile=certifi.where(), tlsAllowInvalidCertificates=True, ssl=True,ssl_cert_reqs=ssl.CERT_NONE)
     
     return client['YT_DataFetch']
 
