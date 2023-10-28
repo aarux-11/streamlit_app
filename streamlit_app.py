@@ -38,6 +38,10 @@ with st.sidebar:
 client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
 db = client.YT_DataFetch
 
+collections1 = db.channel_details
+collections2 = db.video_details
+collections3 = db.comments_details
+
 #connect with mysql db server 8.0
 # CONNECTING WITH mysql DATABASE
 # mydb = mysql.connector.connect(host="127.0.0.1", user="root", password="pass11", database= "youtube_db", auth_plugin='mysql_native_password')
@@ -204,13 +208,12 @@ if selected == "Extract & Transform":
                     return com_d
                 comm_details = comments()
 
-                collections1 = db.channel_details
                 collections1.insert_many(ch_details)
 
-                collections2 = db.video_details
+                
                 collections2.insert_many(vid_details)
 
-                collections3 = db.comments_details
+                
                 collections3.insert_many(comm_details)
                 st.success("Upload to MogoDB successful !!")
       
