@@ -1,4 +1,4 @@
-#import mysql.connector
+import mysql.connector
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -57,15 +57,12 @@ dbname = get_database()
 
 #connect with mysql db server 8.0
 # CONNECTING WITH mysql DATABASE
-# mydb = mysql.connector.connect(host="127.0.0.1", user="root", password="pass11", database= "youtube_db", auth_plugin='mysql_native_password')
-# mycursor = mydb.cursor(buffered=True)
+mydb = mysql.connector.connect(host="127.0.0.1", port = 3306, user="root", password="pass11", database= "youtube_db", auth_plugin='mysql_native_password')
+mycursor = mydb.cursor(buffered=True)
 
 # CONNECTING WITH phpmyadmin DATABASE
 # mydb = pymysql.connect(host="localhost", port=6060, user="root", passwd="", database="youtube_db")
 # mycursor = mydb.cursor(buffered=True)
-
-mydb = pymysql.connect(host="localhost", user="root", passwd="", database="youtube_db")
-cursor = mydb.cursor()
 
 
 # BUILDING CONNECTION WITH YOUTUBE API
