@@ -1,4 +1,4 @@
-import mysql.connector
+#import mysql.connector
 import pandas as pd
 import plotly.express as px
 import streamlit as st
