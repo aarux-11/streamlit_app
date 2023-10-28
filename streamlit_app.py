@@ -7,6 +7,7 @@ import pymongo
 from googleapiclient.discovery import build
 from PIL import Image
 import pymysql
+import ssl
 
 PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION= 'python'
 
