@@ -49,7 +49,7 @@ def get_database():
 if __name__ == "__main__":
     dbname = get_database()
 
-from pymongo_get_database import get_database
+# from pymongo_get_database import get_database
 dbname = get_database()
 collections1 = dbname["channel_details"]
 collections2 = dbname["video_details"]
