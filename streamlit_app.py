@@ -36,9 +36,6 @@ with st.sidebar:
 
 
 #Bridging a connection with MongoDB Atlas and Creating a new database(youtube_data)
-# client = pymongo.MongoClient("mongodb+srv://Aarushi:'%40%40rushi1108'@youtubeproject.nrit3zy.mongodb.net/?retryWrites=true&w=majority")
-# db = client.YT_DataFetch
-
 from pymongo import MongoClient
 
 import certifi
