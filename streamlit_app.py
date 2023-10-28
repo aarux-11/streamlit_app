@@ -41,7 +41,7 @@ with st.sidebar:
 from pymongo import MongoClient
 
 def get_database():
-    CONNECTION_STRING = "mongodb+srv://Aarushi:<password>@youtubeproject.nrit3zy.mongodb.net/"
+    CONNECTION_STRING = "mongodb+srv://Aarushi:%40%40rushi1108@youtubeproject.nrit3zy.mongodb.net/"
     client = MongoClient(CONNECTION_STRING)
     
     return client['YT_DataFetch']
