@@ -175,9 +175,9 @@ def get_comments_details(v_id):
 
 
 # FUNCTION TO GET CHANNEL NAMES FROM MONGODB
-def channel_names():   
+def channel_names():
     ch_name = []
-    for i in dbname.channel_details.find():
+    for i in db.channel_details.find():
         ch_name.append(i['Channel_name'])
     return ch_name
 
